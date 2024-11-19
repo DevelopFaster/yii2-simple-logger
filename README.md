@@ -81,7 +81,7 @@ return [
     ],
 ];
 ```
-ations for console appliaction
+actions for console appliaction
 
 ```
     log/log test
@@ -89,7 +89,7 @@ ations for console appliaction
     log/log-to-all test
 ```
 
-ations for web appliaction
+actions for web appliaction
 
 ```
     http://localhost:20080/log/log/?message=test&type=db
