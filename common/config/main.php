@@ -11,7 +11,7 @@ return [
             'class' => \yii\caching\FileCache::class,
         ],
         'logger' => [
-            'class' => common\components\logger\Logger::class
+            'class' => common\components\logger\interfaces\LoggerInterface::class
         ],
         'loggerHandlersFactory' => [
             'class' => common\components\logger\LoggerHandlersFactory::class,
@@ -39,7 +39,7 @@ return [
     ],
     'container' => [
         'definitions' => [
-            common\components\logger\Logger::class => function($container, $params, $config) {
+            common\components\logger\interfaces\LoggerInterface::class => function($container, $params, $config) {
                 return new common\components\logger\Logger(
                     [
                         Yii::$app->loggerHandlersFactory->createLogger(common\components\logger\LoggerTypesEnum::FILE),
